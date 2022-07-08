@@ -112,19 +112,19 @@ $(function () {
             url:window.location.href,
             to:to
         }
-        // $.ajax({
-        //     url:"/send-mail",
-        //     type:"post",
-        //     data:JSON.stringify(data),
-        //     dataType:"json",
-        //     contentType:"application/json",
-        //     success:function(result){
-        //         alert("invite send")
-        //     },
-        //     error:function(result){
-        //         console.log(result.responseJSON)
-        //     }
-        // })
+        $.ajax({
+            url:"/send-mail",
+            type:"post",
+            data:JSON.stringify(data),
+            dataType:"json",
+            contentType:"application/json",
+            success:function(result){
+                alert("invite send")
+            },
+            error:function(result){
+                console.log(result.responseJSON)
+            }
+        })
     })
 
 })
